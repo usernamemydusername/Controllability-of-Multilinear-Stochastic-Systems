@@ -96,7 +96,7 @@ for ni = 1:length(n_vals)
         for p = 1:k
             Cp = ctrb(A{p}, B{p});
             %ranks_Cp(p) = rank(Cp);
-            [~, S_mat, ~] = svd(C_recursive);
+            [~, S_mat, ~] = svd(Cp);
             S_diag_mat = diag(S_mat);
             last_nonzero_S_diag_mat = find(S_diag_mat >= 1e-15*S_diag_mat(1), 1, 'last');
             S_mat = numel(S_diag_mat(1:last_nonzero_S_diag_mat));
