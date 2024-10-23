@@ -1,21 +1,3 @@
-A1 = rand(4,4);
-A2 = rand(4,4);
-A3 = rand(4,4);
-A4 = rand(5,5);
-A5 = rand(5,5);
-%An = kron(kron(kron(kron(A5,A4),A3),A2),A1);
-An = kron(kron(A3,A2), A1);
-%sort(kron(eig(A2), eig(A1))) - sort(eig(An))
-%max(abs(sort(kron(eig(A2), eig(A1))) - sort(eig(An))))
-sort(eig(An));
-%sort(kron(kron(eig(A2),eig(A3)),eig(A1))) - sort(eig(An));
-sort(kron(sort(kron(eig(A1),eig(A2))),eig(A3))) - sort(eig(An));
-sort(kron(kron(eig(A1),eig(A2)),eig(A3))) - sort(eig(An));
-%sort(kron(sort(kron(sort(kron(sort(kron(eig(A1),eig(A2))),eig(A3))),eig(A4))),eig(A5))) - sort(eig(An))
-%sort(kron(kron(kron(kron(eig(A1),eig(A2)),eig(A3)),eig(A4)),eig(A5))) - sort(eig(An))
-%% 2. ctrb
-ctrb(A1, rand(2,3))
-
 %% 1. check time of computing eig(A) vs (\sum_p eig(Ap)) + lambda1 kron lambda2 kron ... kron lambdak
 %--------- prop 1 vs corollary 2
 % n: each Ap is of size n*n
